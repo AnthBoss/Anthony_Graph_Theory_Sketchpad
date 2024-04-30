@@ -38,6 +38,7 @@ namespace GraphTheorySketchPad.Graphing
         /// </summary>
         private int radius;
 
+        private Color color;
         private int parallelEdges;
         private List<Edge> connectedEdges;
         private List<Vertex> neighbors;
@@ -48,11 +49,12 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="id"> The id of the vertex. </param>
         /// <param name="point"> The coordinants of the vertex. </param>
         /// <param name="radius"> The size or radius of the vertex. </param>
-        public Vertex(string id, Point point, int radius)
+        public Vertex(string id, Color color, Point point, int radius)
         {
             this.id = id;
             this.current = false;
             this.radius = radius;
+            this.color = color;
             this.parallelEdges = 0;
 
             // This is for the point adjusting to the screen.
@@ -158,6 +160,22 @@ namespace GraphTheorySketchPad.Graphing
         }
 
         /// <summary>
+        /// Gets or sets the vertex color.
+        /// </summary>
+        public Color VertexColor
+        {
+            get
+            {
+                return this.color;
+            }
+
+            set
+            {
+                this.color = value;
+            }
+        }
+
+        /// <summary>
         /// Provided by the interface, and gives a draw function to the Vertex class to draw the vertex on the WinForms.
         /// </summary>
         /// <param name="g"> The given graphics. </param>
@@ -222,7 +240,7 @@ namespace GraphTheorySketchPad.Graphing
         /// If the user decides to move his vertex to a different coordinant.
         /// </summary>
         /// <param name="targetPoint"> The new target location. </param>
-        public void MoveCoordinants(Point targetPoint)
+        public void MoveCoordinates(Point targetPoint)
         {
             this.point = new Point(this.point.X + targetPoint.X, this.point.Y + targetPoint.Y);
         }

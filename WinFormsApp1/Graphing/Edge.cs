@@ -20,6 +20,7 @@ namespace GraphTheorySketchPad.Graphing
     {
         private Vertex vertex1; // The first vertex in the given edge.
         private Vertex vertex2; // The second vertex in the given edge.
+        private Color color; // The edges color.
         private bool current; // Checks to see if the edge is currently selected.
         private bool isLoop; // Checks to see if the edge is in a loop or not.
         private int edgeWidth; // Determines the length (or width) or the edge.
@@ -31,11 +32,12 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="vertex1"> First vertex. </param>
         /// <param name="vertex2"> Second vertex. </param>
         /// <param name="edgeWidth"> Edge width. </param>
-        public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth)
+        public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth, Color color)
         {
             this.vertex1 = vertex1;
             this.vertex2 = vertex2;
             this.edgeWidth = edgeWidth;
+            this.color = color;
         }
 
         /// <summary>
@@ -45,12 +47,13 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="vertex2"> Second vertex. </param>
         /// <param name="edgeWidth"> Edge width. </param>
         /// <param name="parallelEdge"> The other parallel edge. </param>
-        public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth, int parallelEdge)
+        public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth, int parallelEdge, Color color)
         {
             this.vertex1 = vertex1;
             this.vertex2 = vertex2;
             this.edgeWidth = edgeWidth;
             this.parallelEdge = parallelEdge;
+            this.color = color;
         }
 
         /// <summary>
@@ -99,6 +102,19 @@ namespace GraphTheorySketchPad.Graphing
             get
             {
             return this.vertex2;
+            }
+        }
+
+        public Color Color
+        {
+            get
+            {
+                return this.color;
+            }
+
+            set
+            {
+                color = value;
             }
         }
 

@@ -1,3 +1,5 @@
+using GraphTheoristSketchpad;
+
 namespace GraphTheorySketchPad
 {
     internal static class Program
@@ -8,10 +10,15 @@ namespace GraphTheorySketchPad
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new GraphSketchpad());
+            if (Environment.OSVersion.Version.Major >= 6)
+                SetProcessDPIAware();
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new SketchPad());
         }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
     }
 }
