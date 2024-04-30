@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\WinFormsApp1.csproj",
-      "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\GraphTheorySketchPad.csproj",
+      "projectName": "GraphTheorySketchPad",
+      "projectPath": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\GraphTheorySketchPad.csproj",
       "packagesPath": "C:\\Users\\Antho\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
