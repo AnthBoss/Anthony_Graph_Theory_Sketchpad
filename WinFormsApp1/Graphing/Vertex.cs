@@ -15,7 +15,7 @@ namespace GraphTheorySketchPad.Graphing
     /// <summary>
     /// The public class that initializes a vertex.
     /// </summary>
-    public class Vertex
+    public class Vertex : IGraphableItem
     {
         /// <summary>
         /// This is to identify the given vertex.

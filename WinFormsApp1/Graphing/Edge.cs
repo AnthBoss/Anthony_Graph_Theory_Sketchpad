@@ -16,7 +16,7 @@ namespace GraphTheorySketchPad.Graphing
     /// <summary>
     /// The public class to create an Edge.
     /// </summary>
-    public class Edge
+    public class Edge : IGraphableItem
     {
         private Vertex vertex1; // The first vertex in the given edge.
         private Vertex vertex2; // The second vertex in the given edge.
