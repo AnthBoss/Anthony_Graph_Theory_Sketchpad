@@ -326,8 +326,8 @@ namespace GraphTheoristSketchpad
         }
         private void UpdateGraphInfo()
         {
-            edge_label.Text = "m = " + graph.GetEdges.Count();
-            vertex_label.Text = "n = " + graph.GetVertices.Count();
+            edge_label.Text = "Edges(m) =  " + graph.GetEdges.Count();
+            vertex_label.Text = "Vertices(n) = " + graph.GetVertices.Count();
 
             if (graph.GetCurrentVertex != null)
             {
@@ -335,12 +335,12 @@ namespace GraphTheoristSketchpad
             }
             else
             {
-                deg_label.Text = "deg(V) = ";
+                deg_label.Text = "Degrees(V) = ";
             }
 
-            component_label.Text = "components = " + graph.GetConnectedComponentCount();
+            component_label.Text = "Number of Components: " + graph.GetConnectedComponentCount();
 
-            bipartite_label.Text = "bipartite: ";
+            bipartite_label.Text = "Is Bipartite? ";
 
             int[,] adjacenyMatrix = graph.GetAdjacencyMatrix();
             int dimX = adjacenyMatrix.GetLength(0);
@@ -370,7 +370,7 @@ namespace GraphTheoristSketchpad
         }
         private void Bipartite_test_button_Click(object sender, EventArgs e)
         {
-            bipartite_label.Text = "bipartite: " + graph.IsBipartite().ToString();
+            bipartite_label.Text = "Bipartite Result: " + graph.IsBipartite().ToString();
             graphPanel.Invalidate();
         }
     }
