@@ -209,5 +209,22 @@ namespace GraphTheorySketchPad.Graphing
 
             return res;
         }
+
+        /// <summary>
+        /// Increases the amount of parallel edges by 1.
+        /// </summary>
+        public void AddParallelEdge()
+        {
+            this.parallelEdges++;
+        }
+
+        /// <summary>
+        /// If the user decides to move his vertex to a different coordinant.
+        /// </summary>
+        /// <param name="targetPoint"> The new target location. </param>
+        public void MoveCoordinants(Point targetPoint)
+        {
+            this.point = new Point(this.point.X + targetPoint.X, this.point.Y + targetPoint.Y);
+        }
     }
 }
