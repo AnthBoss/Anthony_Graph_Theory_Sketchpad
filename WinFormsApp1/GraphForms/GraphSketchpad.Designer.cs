@@ -54,11 +54,11 @@ namespace GraphTheoristSketchpad
             graphPanel.Name = "graphPanel";
             graphPanel.Size = new Size(1226, 647);
             graphPanel.TabIndex = 0;
-            graphPanel.Paint += panel1_Paint;
-            graphPanel.MouseClick += panel1_MouseClick_1;
-            graphPanel.MouseDown += GraphPanel_MouseDown;
-            graphPanel.MouseMove += GraphPanel_MouseMove;
-            graphPanel.MouseUp += GraphPanel_MouseUp;
+            graphPanel.Paint += PanelPaint;
+            graphPanel.MouseClick += PanelMouseClick;
+            graphPanel.MouseDown += GraphPanelMouseDown;
+            graphPanel.MouseMove += GraphPanelMouseMove;
+            graphPanel.MouseUp += GraphPanelMouseUp;
             // 
             // select_color_button
             // 
@@ -69,7 +69,7 @@ namespace GraphTheoristSketchpad
             select_color_button.Size = new Size(75, 70);
             select_color_button.TabIndex = 2;
             select_color_button.UseVisualStyleBackColor = false;
-            select_color_button.Click += Select_color_button_Click;
+            select_color_button.Click += SelectColorButtonClick;
             // 
             // deleteButton
             // 
@@ -81,7 +81,7 @@ namespace GraphTheoristSketchpad
             deleteButton.Size = new Size(75, 70);
             deleteButton.TabIndex = 1;
             deleteButton.UseVisualStyleBackColor = false;
-            deleteButton.Click += DeleteButton_Click;
+            deleteButton.Click += DeleteButtonClick;
             // 
             // paint_color_dialog
             // 
@@ -99,7 +99,7 @@ namespace GraphTheoristSketchpad
             paint_button.Text = "Change Color";
             paint_button.TextAlign = ContentAlignment.TopCenter;
             paint_button.UseVisualStyleBackColor = true;
-            paint_button.Click += Paint_button_Click_1;
+            paint_button.Click += PaintButtonClick;
             // 
             // delete_label
             // 
@@ -174,7 +174,7 @@ namespace GraphTheoristSketchpad
             clear_all_button.Text = "Clear All";
             clear_all_button.TextAlign = ContentAlignment.TopCenter;
             clear_all_button.UseVisualStyleBackColor = true;
-            clear_all_button.Click += Clear_all_button_Click;
+            clear_all_button.Click += ClearAllButtonClick;
             // 
             // matrix_display
             // 
@@ -207,7 +207,7 @@ namespace GraphTheoristSketchpad
             bipartite_test_button.TabIndex = 14;
             bipartite_test_button.Text = "Test Graph";
             bipartite_test_button.UseVisualStyleBackColor = true;
-            bipartite_test_button.Click += Bipartite_test_button_Click;
+            bipartite_test_button.Click += BipartiteTestButtonClick;
             // 
             // SketchPad
             // 

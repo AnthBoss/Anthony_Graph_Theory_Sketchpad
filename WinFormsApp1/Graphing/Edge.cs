@@ -18,13 +18,14 @@ namespace GraphTheorySketchPad.Graphing
     /// </summary>
     public class Edge : IGraphableItem
     {
-        private Vertex vertex1; // The first vertex in the given edge.
-        private Vertex vertex2; // The second vertex in the given edge.
-        private Color color; // The edges color.
         private bool current; // Checks to see if the edge is currently selected.
         private bool isLoop; // Checks to see if the edge is in a loop or not.
         private int edgeWidth; // Determines the length (or width) or the edge.
         private int parallelEdge; // Determines whether or not the edge is parallel.
+
+        private Vertex vertex1; // The first vertex in the given edge.
+        private Vertex vertex2; // The second vertex in the given edge.
+        private Color color; // The edges color.
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge"/> class.
@@ -32,6 +33,7 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="vertex1"> First vertex. </param>
         /// <param name="vertex2"> Second vertex. </param>
         /// <param name="edgeWidth"> Edge width. </param>
+        /// <param name="color"> The color. </param>
         public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth, Color color)
         {
             this.vertex1 = vertex1;
@@ -47,6 +49,7 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="vertex2"> Second vertex. </param>
         /// <param name="edgeWidth"> Edge width. </param>
         /// <param name="parallelEdge"> The other parallel edge. </param>
+        /// /// <param name="color"> The color of the edge. </param>
         public Edge(Vertex vertex1, Vertex vertex2, int edgeWidth, int parallelEdge, Color color)
         {
             this.vertex1 = vertex1;
@@ -105,6 +108,9 @@ namespace GraphTheorySketchPad.Graphing
             }
         }
 
+        /// <summary>
+        /// Gets or sets the color of the edge.
+        /// </summary>
         public Color Color
         {
             get
@@ -114,7 +120,7 @@ namespace GraphTheorySketchPad.Graphing
 
             set
             {
-                color = value;
+                this.color = value;
             }
         }
 
