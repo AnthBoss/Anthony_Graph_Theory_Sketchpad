@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "GbD+n3sA9fW5Nage82X20Wt1rIWcAwTVCvmu5BItz2RGdaprTXhHtsNnQ7hIEB0kk9BXE1KfixNJM4iewHqdpA==",
+  "dgSpecHash": "v531L3JIzJlChBzCzXW3edMe+W/AD9nzL+VPx2WYa94TiopJZya/8ziZiO+iPCnFspn1BOrMwZGgzY5aIH3s/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Antho\\OneDrive\\Desktop\\Graph_Theory_Sketchpad\\Anthony_Graph_Theory_Sketchpad\\WinFormsApp1\\GraphTheorySketchPad.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Antho\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
   "logs": []
 }
