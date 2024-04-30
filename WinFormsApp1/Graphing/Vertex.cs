@@ -6,6 +6,7 @@ namespace GraphTheorySketchPad.Graphing
 {
     using System;
     using System.Collections.Generic;
+    using System.Drawing;
     using System.Drawing.Drawing2D;
     using System.Linq;
     using System.Text;
@@ -154,6 +155,38 @@ namespace GraphTheorySketchPad.Graphing
             {
                 this.point = value;
             }
+        }
+
+        /// <summary>
+        /// Provided by the interface, and gives a draw function to the Vertex class to draw the vertex on the WinForms.
+        /// </summary>
+        /// <param name="g"> The given graphics. </param>
+        /// <param name="pen"> The given pen. </param>
+        public void Draw(Graphics g, Pen pen)
+        {
+            Color redColor = Color.FromArgb(255, 0, 0);
+            using (var path = this.GetGraphicsPath())
+            using (var brush = new SolidBrush(redColor))
+            {
+                g.FillPath(brush, path); // Fill the path with the predetermined color
+            }
+
+            using (var path = this.GetGraphicsPath())
+            {
+                g.DrawPath(pen, path); // Draw the outline of the path
+            }
+        }
+
+        /// <summary>
+        /// Gets the vertexs path and returns the graphics path.
+        /// </summary>
+        /// <returns> The graphics path. </returns>
+        public GraphicsPath GetGraphicsPath()
+        {
+            var newPath = new GraphicsPath();
+            var p = this.point;
+            newPath.AddEllipse(p.X, p.Y, 2 * this.radius, 2 * this.radius);
+            return newPath;
         }
     }
 }
