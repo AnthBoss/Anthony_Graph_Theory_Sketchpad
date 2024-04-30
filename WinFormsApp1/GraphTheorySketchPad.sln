@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1.csproj", "{1EBB8DCA-82FB-46C0-A6E8-8A9641A13188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphTheorySketchPad", "GraphTheorySketchPad.csproj", "{1EBB8DCA-82FB-46C0-A6E8-8A9641A13188}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
