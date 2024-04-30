@@ -188,5 +188,26 @@ namespace GraphTheorySketchPad.Graphing
             newPath.AddEllipse(p.X, p.Y, 2 * this.radius, 2 * this.radius);
             return newPath;
         }
+
+        /// <summary>
+        /// Function implemented by the interface that returns whether the object was selected when the user clicked or not.
+        /// </summary>
+        /// <param name="clickPosition"> The position of the click. </param>
+        /// <returns> If it was clicked or not. </returns>
+        public bool IsObject(Point clickPosition)
+        {
+            Color colorWhite = Color.FromArgb(255, 255, 255, 255);
+            var res = false;
+
+            using (var path = this.GetGraphicsPath())
+            {
+                using (var pen = new Pen(colorWhite, this.radius + 15))
+                {
+                    res = path.IsOutlineVisible(clickPosition, pen) || path.IsVisible(clickPosition);
+                }
+            }
+
+            return res;
+        }
     }
 }

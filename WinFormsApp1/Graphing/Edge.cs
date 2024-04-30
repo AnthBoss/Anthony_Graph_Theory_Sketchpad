@@ -145,6 +145,25 @@ namespace GraphTheorySketchPad.Graphing
         }
 
         /// <summary>
+        /// Function implemented by the interface that returns whether the object was selected when the user clicked or not.
+        /// </summary>
+        /// <param name="clickPosition"> The position of the click. </param>
+        /// <returns> If the object was selected or not. </returns>
+        public bool IsObject(Point clickPosition)
+        {
+            Color colorWhite = Color.FromArgb(255, 255, 255, 255);
+            var res = false;
+
+            using (var path = this.GetGraphicsPath())
+            using (var pen = new Pen(colorWhite, this.edgeWidth + 15))
+            {
+                res = path.IsOutlineVisible(clickPosition, pen);
+            }
+
+            return res;
+        }
+
+        /// <summary>
         /// Determines the offset amount for paralell edges.
         /// </summary>
         /// <returns> the offset. </returns>
