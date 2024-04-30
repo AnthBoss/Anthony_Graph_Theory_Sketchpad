@@ -49,7 +49,7 @@ namespace GraphTheoristSketchpad
             // graphPanel
             // 
             graphPanel.AutoSize = true;
-            graphPanel.BackColor = Color.PapayaWhip;
+            graphPanel.BackColor = Color.MistyRose;
             graphPanel.Location = new Point(12, 12);
             graphPanel.Name = "graphPanel";
             graphPanel.Size = new Size(1226, 647);
@@ -64,9 +64,9 @@ namespace GraphTheoristSketchpad
             // 
             select_color_button.AutoSize = true;
             select_color_button.BackColor = Color.Red;
-            select_color_button.Location = new Point(817, 775);
+            select_color_button.Location = new Point(773, 779);
             select_color_button.Name = "select_color_button";
-            select_color_button.Size = new Size(75, 70);
+            select_color_button.Size = new Size(26, 26);
             select_color_button.TabIndex = 2;
             select_color_button.UseVisualStyleBackColor = false;
             select_color_button.Click += SelectColorButtonClick;
@@ -76,9 +76,9 @@ namespace GraphTheoristSketchpad
             deleteButton.AutoSize = true;
             deleteButton.BackColor = SystemColors.ButtonFace;
             deleteButton.ForeColor = SystemColors.ActiveCaptionText;
-            deleteButton.Location = new Point(989, 775);
+            deleteButton.Location = new Point(1049, 747);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(75, 70);
+            deleteButton.Size = new Size(31, 30);
             deleteButton.TabIndex = 1;
             deleteButton.UseVisualStyleBackColor = false;
             deleteButton.Click += DeleteButtonClick;
@@ -92,7 +92,7 @@ namespace GraphTheoristSketchpad
             // 
             paint_button.AutoSize = true;
             paint_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            paint_button.Location = new Point(805, 851);
+            paint_button.Location = new Point(805, 775);
             paint_button.Name = "paint_button";
             paint_button.Size = new Size(112, 30);
             paint_button.TabIndex = 3;
@@ -105,7 +105,7 @@ namespace GraphTheoristSketchpad
             // 
             delete_label.AutoSize = true;
             delete_label.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            delete_label.Location = new Point(998, 752);
+            delete_label.Location = new Point(989, 752);
             delete_label.Name = "delete_label";
             delete_label.Size = new Size(54, 20);
             delete_label.TabIndex = 4;
@@ -167,7 +167,7 @@ namespace GraphTheoristSketchpad
             // 
             clear_all_button.AutoSize = true;
             clear_all_button.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            clear_all_button.Location = new Point(989, 851);
+            clear_all_button.Location = new Point(1003, 796);
             clear_all_button.Name = "clear_all_button";
             clear_all_button.Size = new Size(77, 30);
             clear_all_button.TabIndex = 10;
@@ -178,7 +178,7 @@ namespace GraphTheoristSketchpad
             // 
             // matrix_display
             // 
-            matrix_display.BackColor = SystemColors.ActiveCaption;
+            matrix_display.BackColor = SystemColors.Info;
             matrix_display.BorderStyle = BorderStyle.None;
             matrix_display.Font = new Font("Arial Narrow", 12F, FontStyle.Italic, GraphicsUnit.Point);
             matrix_display.Location = new Point(1286, 41);
@@ -213,7 +213,7 @@ namespace GraphTheoristSketchpad
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = SystemColors.GrayText;
             ClientSize = new Size(1874, 958);
             Controls.Add(select_color_button);
             Controls.Add(bipartite_test_button);

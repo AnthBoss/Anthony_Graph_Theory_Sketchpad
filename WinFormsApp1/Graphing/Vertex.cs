@@ -49,6 +49,7 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="id"> The id of the vertex. </param>
         /// <param name="point"> The coordinants of the vertex. </param>
         /// <param name="radius"> The size or radius of the vertex. </param>
+        /// <param name="color"> The color of the vertex. </param>
         public Vertex(string id, Color color, Point point, int radius)
         {
             this.id = id;
@@ -182,9 +183,8 @@ namespace GraphTheorySketchPad.Graphing
         /// <param name="pen"> The given pen. </param>
         public void Draw(Graphics g, Pen pen)
         {
-            Color redColor = Color.FromArgb(255, 0, 0);
             using (var path = this.GetGraphicsPath())
-            using (var brush = new SolidBrush(redColor))
+            using (var brush = new SolidBrush(this.color))
             {
                 g.FillPath(brush, path); // Fill the path with the predetermined color
             }
