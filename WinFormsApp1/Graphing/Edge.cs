@@ -38,8 +38,6 @@ namespace GraphTheorySketchPad.Graphing
             this.edgeWidth = edgeWidth;
         }
 
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge"/> class.
         /// </summary>
@@ -53,6 +51,55 @@ namespace GraphTheorySketchPad.Graphing
             this.vertex2 = vertex2;
             this.edgeWidth = edgeWidth;
             this.parallelEdge = parallelEdge;
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether it is current or not.
+        /// </summary>
+        public bool IsCurrent
+        {
+            get
+            {
+                return this.current;
+            }
+
+            set
+            {
+                this.current = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether it is in a loop or not.
+        /// </summary>
+        public bool IsLoop
+        {
+            get
+            {
+                return this.isLoop;
+            }
+        }
+
+        /// <summary>
+        /// Gets the first vertex.
+        /// </summary>
+        public Vertex Vertex1
+        {
+            get
+            {
+                return this.vertex1;
+            }
+        }
+
+        /// <summary>
+        /// Gets the second vertex.
+        /// </summary>
+        public Vertex Vertex2
+        {
+            get
+            {
+            return this.vertex2;
+            }
         }
     }
 }
