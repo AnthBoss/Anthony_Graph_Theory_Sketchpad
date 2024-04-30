@@ -15,5 +15,18 @@ namespace GraphTheorySketchPad.Graphing
     /// </summary>
     public interface IGraphableItem
     {
+        /// <summary>
+        /// This will check to see if an object or item is graphable given the clicked location.
+        /// </summary>
+        /// <param name="click"> the position of the mouse when it clicked. </param>
+        /// <returns> Whether the object was clicked or not clicked. </returns>
+        bool IsObject(Point click);
+
+        /// <summary>
+        /// The function that will physically draw the objects onto the screen.
+        /// </summary>
+        /// <param name="g"> The graphics selected. </param>
+        /// <param name="pen"> The pen selected. </param>
+        void Draw(Graphics g, Pen pen);
     }
 }
