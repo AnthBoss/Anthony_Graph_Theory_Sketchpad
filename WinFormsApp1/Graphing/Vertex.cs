@@ -41,6 +41,12 @@ namespace GraphTheorySketchPad.Graphing
         private List<Edge> connectedEdges;
         private List<Vertex> neighbors;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Vertex"/> class.
+        /// </summary>
+        /// <param name="id"> The id of the vertex. </param>
+        /// <param name="point"> The coordinants of the vertex. </param>
+        /// <param name="radius"> The size or radius of the vertex. </param>
         public Vertex(string id, Point point, int radius)
         {
             this.id = id;
@@ -56,6 +62,98 @@ namespace GraphTheorySketchPad.Graphing
 
             this.connectedEdges = new List<Edge>();
             this.neighbors = new List<Vertex>();
+        }
+
+        /// <summary>
+        /// Gets a list of the neighbors who are adjacent to this vertex.
+        /// </summary>
+        public List<Vertex> GetNeighbors
+        {
+            get
+            {
+                return this.neighbors;
+            }
+        }
+
+        /// <summary>
+        /// Gets a list of the connected edges to this vertex.
+        /// </summary>
+        public List<Edge> GetConnectedEdges
+        {
+            get
+            {
+                return this.connectedEdges;
+            }
+        }
+
+        /// <summary>
+        /// Gets the radius or size of the vertex.
+        /// </summary>
+        public int GetRadius
+        {
+            get
+            {
+                return this.radius;
+            }
+        }
+
+        /// <summary>
+        /// Gets the int value of the parallel edges connected to this vertex.
+        /// </summary>
+        public int GetParallelEdges
+        {
+            get
+            {
+                return this.parallelEdges;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the ID of the string.
+        /// </summary>
+        public string ID
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                this.id = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether it is currently selected or not selected, in this case the vertex.
+        /// </summary>
+        public bool IsCurrent
+        {
+            get
+            {
+                return this.current;
+            }
+
+            set
+            {
+                this.current = value;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the point value which is stored for the location of the coordinants of the vertex.
+        /// </summary>
+        public Point Coordinates
+        {
+            get
+            {
+                return this.point;
+            }
+
+            set
+            {
+                this.point = value;
+            }
         }
     }
 }
