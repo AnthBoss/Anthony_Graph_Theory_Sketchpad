@@ -31,5 +31,49 @@ namespace GraphTheorySketchPad.Graphing
             this.vertices = new List<Vertex>();
             this.hasCurrentVertex = false;
         }
+
+        /// <summary>
+        /// Gets the vertices.
+        /// </summary>
+        public List<Vertex> GetVertices
+        {
+            get
+            {
+                return this.vertices;
+            }
+        }
+
+        /// <summary>
+        /// Gets the edges.
+        /// </summary>
+        public List<Edge> GetEdges
+        {
+            get
+            {
+                return this.edges;
+            }
+        }
+
+        /// <summary>
+        /// Gets the current vertex.
+        /// </summary>
+        public Vertex GetCurrentVertex
+        {
+            get
+            {
+                return this.currentVertex;
+            }
+        }
+
+        /// <summary>
+        /// Gets the current edges.
+        /// </summary>
+        public List<Edge> GetCurrentEdges
+        {
+            get
+            {
+                return this.currentEdges;
+            }
+        }
     }
 }
